@@ -1,0 +1,6 @@
+train: /media/mohammad/New Volume/AI_Project/Yolov5-Lite/YOLOv5-Lite/data/antenna/images/train
+val: /media/mohammad/New Volume/AI_Project/Yolov5-Lite/YOLOv5-Lite/data/antenna/images/val
+
+nc: 1
+
+names: [ 'head']
