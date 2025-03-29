@@ -10,7 +10,7 @@ In this project, this model is specifically designed to make it easier to detect
 </p>
 
 
-## Example of images that model can detect
+## Example of images that model can detect (even in sunrise or back to light)
 
 <p align="center">
   <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test6.png" width="24%" />
