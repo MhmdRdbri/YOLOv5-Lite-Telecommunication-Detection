@@ -22,7 +22,7 @@ In this project, this model is specifically designed to make it easier to detect
 ## Result speed exmaple on car dataset also
 <p align="center">
   <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/example2.jpg" width="30%" height="50%" />
-  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/Result.png" width="70%" height="50%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/Result.png" width="69%" height="50%" />
 </p>
 
 ## Comparison of ablation experiment results
