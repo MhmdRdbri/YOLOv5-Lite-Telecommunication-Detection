@@ -9,10 +9,13 @@ In this project, this model is specifically designed to make it easier to detect
 
 ## Example of images that model can detect
 
-![image](https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test6.png)
-![image](https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test4.jpg)
-![image](https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test3.jpg)
-![image](https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test2.jpg)
+<p align="center">
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test6.png" width="24%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test4.jpg" width="24%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test3.jpg" width="24%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test2.jpg" width="24%" />
+</p>
+
 
 
 ## Comparison of ablation experiment results
