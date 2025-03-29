@@ -6,7 +6,10 @@ Perform a series of ablation experiments on yolov5 to make it lighter (smaller F
 
 In this project, this model is specifically designed to make it easier to detect the tip of a telecommunications tower so that the drone can maintain its path using its detection and centering.</br>
 <p align="center">
-  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/test1.jpg" width="50%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/res1.jpg" width="50%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/res2.jpg" width="50%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/res3.png" width="50%" />
+  <img src="https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/res4.jpg" width="50%" />
 </p>
 
 
