@@ -1,4 +1,4 @@
-# YOLOv5-Lite：Lighter, faster and easier to deploy   ![](https://zenodo.org/badge/DOI/10.5281/zenodo.5241425.svg)
+# YOLOv5-Lite：Customized for telecmmunication towers detection for drones   ![](https://zenodo.org/badge/DOI/10.5281/zenodo.5241425.svg)
 
 ![论文插图](https://user-images.githubusercontent.com/82716366/167448925-a431d3a4-ad5d-491d-be95-c90701122a54.png)
 
