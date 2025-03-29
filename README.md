@@ -60,10 +60,6 @@ AXera-Pi|Cortex A7@CPU<br />3.6TOPs @NPU|Linux(arm64)|640×640|axpi|-|-|-|22ms|2
 
 Baidu Drive Password: `pogg`
 
-#### v5lite-s model: TFLite Float32, Float16, INT8, Dynamic range quantization, ONNX, TFJS, TensorRT, OpenVINO IR FP32/FP16, Myriad Inference Engin Blob, CoreML
-[https://github.com/PINTO0309/PINTO_model_zoo/tree/main/180_YOLOv5-Lite](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/180_YOLOv5-Lite)
-
-#### Thanks for PINTO0309:[https://github.com/PINTO0309/PINTO_model_zoo/tree/main/180_YOLOv5-Lite](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/180_YOLOv5-Lite)
 
 
 ## <div>How to use</div>
@@ -72,13 +68,12 @@ Baidu Drive Password: `pogg`
 <summary>Install</summary>
 
 [**Python>=3.6.0**](https://www.python.org/) is required with all
-[requirements.txt](https://github.com/ppogg/YOLOv5-Lite/blob/master/requirements.txt) installed including
+[requirements.txt](https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection/blob/main/requirements.txt) installed including
 [**PyTorch>=1.7**](https://pytorch.org/get-started/locally/):
 <!-- $ sudo apt update && apt install -y libgl1-mesa-glx libsm6 libxext6 libxrender-dev -->
 
 ```bash
-$ git clone https://github.com/ppogg/YOLOv5-Lite
-$ cd YOLOv5-Lite
+$ git clone https://github.com/MhmdRdbri/YOLOv5-Lite-Telecommunication-Detection
 $ pip install -r requirements.txt
 ```
 
@@ -88,7 +83,7 @@ $ pip install -r requirements.txt
 <summary>Inference with detect.py</summary>
 
 `detect.py` runs inference on a variety of sources, downloading models automatically from
-the [latest YOLOv5-Lite release](https://github.com/ppogg/YOLOv5-Lite/releases) and saving results to `runs/detect`.
+the latest YOLOv5-Lite release and saving results to `runs/detect`.
 
 ```bash
 $ python detect.py --source 0  # webcam
@@ -128,119 +123,31 @@ $ python -m torch.distributed.launch --nproc_per_node 2 train.py
 Training set and test set distribution （the path with xx.jpg）
   
  ```bash
-train: ../coco/images/train2017/
-val: ../coco/images/val2017/
+train: ../data/antenna/images/train/
+val: ../data/antenna/images/val/
 ```
 ```bash
 ├── images            # xx.jpg example
-│   ├── train2017        
+│   ├── train        
 │   │   ├── 000001.jpg
 │   │   ├── 000002.jpg
 │   │   └── 000003.jpg
-│   └── val2017         
+│   └── val         
 │       ├── 100001.jpg
 │       ├── 100002.jpg
 │       └── 100003.jpg
 └── labels             # xx.txt example      
-    ├── train2017       
+    ├── train       
     │   ├── 000001.txt
     │   ├── 000002.txt
     │   └── 000003.txt
-    └── val2017         
+    └── val         
         ├── 100001.txt
         ├── 100002.txt
         └── 100003.txt
 ```
   
 </details> 
-
-<details open>
-<summary>Auto LabelImg</summary>
-
-[**Link** ：https://github.com/ppogg/AutoLabelImg](https://github.com/ppogg/AutoLabelImg)  
-
-You can use LabelImg based YOLOv5-5.0 and YOLOv5-Lite to AutoAnnotate, biubiubiu 🚀 🚀 🚀 
-<img src="https://user-images.githubusercontent.com/82716366/177030174-dc3a5827-2821-4d8c-8d78-babe83c42fbf.JPG" width="950"/><br/>
-
-  
-</details> 
-
-<details open>
-<summary>Model Hub</summary>
-
-Here, the original components of YOLOv5 and the reproduced components of YOLOv5-Lite are organized and stored in the [model hub](https://github.com/ppogg/YOLOv5-Lite/tree/master/models/hub)：
-
-  ![modelhub](https://user-images.githubusercontent.com/82716366/146787562-e2c1c4c1-726e-4efc-9eae-d92f34333e8d.jpg)
-  
-  <details open>
-<summary>Heatmap Analysis</summary>
-
-  
-   ```bash
-$ python main.py --type all
-```
-  
-![论文插图2](https://user-images.githubusercontent.com/82716366/167449474-3689c2bf-197a-4403-849c-b85db6bcc476.png)
-
-  Updating ...
-
-</details>
-
-## How to deploy
-
-[**ncnn**](https://github.com/ppogg/YOLOv5-Lite/blob/master/cpp_demo/ncnn/README.md)  for arm-cpu
-
-[**mnn**](https://github.com/ppogg/YOLOv5-Lite/blob/master/cpp_demo/mnn/README.md) for arm-cpu
-
-[**openvino**](https://github.com/ppogg/YOLOv5-Lite/blob/master/python_demo/openvino/README.md) x86-cpu or x86-vpu 
-
-[**tensorrt(C++)**](https://github.com/ppogg/YOLOv5-Lite/blob/master/cpp_demo/tensorrt/README.md) for arm-gpu or arm-npu or x86-gpu
-
-[**tensorrt(Python)**](https://github.com/ppogg/YOLOv5-Lite/tree/master/python_demo/tensorrt) for arm-gpu or arm-npu or x86-gpu
-
-[**Android**](https://github.com/ppogg/YOLOv5-Lite/blob/master/android_demo/ncnn-android-v5lite/README.md) for arm-cpu
-
-## Android_demo 
-
-This is a Redmi phone, the processor is Snapdragon 730G, and yolov5-lite is used for detection. The performance is as follows:
-
-link: https://github.com/ppogg/YOLOv5-Lite/tree/master/android_demo/ncnn-android-v5lite
-
-Android_v5Lite-s: https://drive.google.com/file/d/1CtohY68N2B9XYuqFLiTp-Nd2kuFWgAUR/view?usp=sharing
-
-Android_v5Lite-g: https://drive.google.com/file/d/1FnvkWxxP_aZwhi000xjIuhJ_OhqOUJcj/view?usp=sharing
-
-new android app:[link] https://pan.baidu.com/s/1PRhW4fI1jq8VboPyishcIQ [keyword] pogg
-
-<img src="https://user-images.githubusercontent.com/82716366/149959014-5f027b1c-67b6-47e2-976b-59a7c631b0f2.jpg" width="650"/><br/>
-
-## More detailed explanation
-
-#### Detailed model link:
- 
- What is YOLOv5-Lite S/E model:
- zhihu link (Chinese): [https://zhuanlan.zhihu.com/p/400545131](https://zhuanlan.zhihu.com/p/400545131)
- 
- What is YOLOv5-Lite C model:
- zhihu link (Chinese): [https://zhuanlan.zhihu.com/p/420737659](https://zhuanlan.zhihu.com/p/420737659)
-
- What is YOLOv5-Lite G model:
- zhihu link (Chinese): [https://zhuanlan.zhihu.com/p/410874403](https://zhuanlan.zhihu.com/p/410874403)
- 
- How to deploy on ncnn with fp16 or int8:
- csdn link (Chinese): [https://blog.csdn.net/weixin_45829462/article/details/119787840](https://blog.csdn.net/weixin_45829462/article/details/119787840)
-
- How to deploy on mnn with fp16 or int8:
- zhihu link (Chinese): [https://zhuanlan.zhihu.com/p/672633849](https://zhuanlan.zhihu.com/p/672633849)
- 
- How to deploy on onnxruntime:
- zhihu link (Chinese): [https://zhuanlan.zhihu.com/p/476533259](https://zhuanlan.zhihu.com/p/476533259)(old version)
- 
- How to deploy on tensorrt:
- zhihu link (Chinese): [https://zhuanlan.zhihu.com/p/478630138](https://zhuanlan.zhihu.com/p/478630138)
- 
- How to optimize on tensorrt:
- zhihu link (Chinese): [https://zhuanlan.zhihu.com/p/463074494](https://zhuanlan.zhihu.com/p/463074494)
 
 ## Reference
 
@@ -249,15 +156,3 @@ https://github.com/ultralytics/yolov5
 https://github.com/megvii-model/ShuffleNet-Series
 
 https://github.com/Tencent/ncnn
-
-## Citing YOLOv5-Lite
-If you use YOLOv5-Lite in your research, please cite our work and give a star ⭐:
-
-```
- @misc{yolov5lite2021,
-  title = {YOLOv5-Lite: Lighter, faster and easier to deploy},
-  author = {Xiangrong Chen and Ziman Gong},
-  doi = {10.5281/zenodo.5241425}
-  year={2021}
-}
-```
