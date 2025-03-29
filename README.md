@@ -1,4 +1,4 @@
-# YOLOv5-Lite：Customized for telecmmunication towers detection for drones   ![](https://zenodo.org/badge/DOI/10.5281/zenodo.5241425.svg)
+# YOLOv5-Lite：Customized for telecmmunication towers detection for drones  
 
 ![论文插图](https://user-images.githubusercontent.com/82716366/167448925-a431d3a4-ad5d-491d-be95-c90701122a54.png)
 
@@ -23,7 +23,6 @@ Perform a series of ablation experiments on yolov5 to make it lighter (smaller F
 011| YOLOv5s(6.0)| 640×640| 16.5G|7.23M|14.0| 56.0|37.2
 012| YOLOv5-Lite<sub>g</sub><sup>ours</sup>| 640×640|15.6G |5.39M|10.9| 57.6|39.1| 
 
-See the wiki: https://github.com/ppogg/YOLOv5-Lite/wiki/Test-the-map-of-models-about-coco
 
 ## Comparison on different platforms
 
@@ -36,63 +35,6 @@ Xiaomi 10|@Snapdragon 865|Android(armv8)|320×320|ncnn|10ms|14ms|-|-|163ms
 Raspberrypi 4B|@ARM Cortex-A72|Linux(arm64)|320×320|ncnn|-|84ms|-|-|371ms
 Raspberrypi 4B|@ARM Cortex-A72|Linux(arm64)|320×320|mnn|-|71ms|-|-|356ms
 AXera-Pi|Cortex A7@CPU<br />3.6TOPs @NPU|Linux(arm64)|640×640|axpi|-|-|-|22ms|22ms
-
-### The tutorial of 15FPS on Raspberry Pi 4B:
-[https://zhuanlan.zhihu.com/p/672633849](https://zhuanlan.zhihu.com/p/672633849)
-
-* The above is a 4-thread test benchmark
-* Raspberrypi 4B enable bf16s optimization，[Raspberrypi 64 Bit OS](http://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2020-08-24/)
-
-###  qq交流群：993965802
-
-入群答案:剪枝 or 蒸馏 or 量化 or 低秩分解（任意其一均可）
-
-##  ·Model Zoo· 
-
-#### @v5lite-e:
-
-Model|Size|Backbone|Head|Framework|Design for
-:---:|:---:|:---:|:---:|:---:|:---
-v5Lite-e.pt|1.7m|shufflenetv2（Megvii）|v5Litee-head|Pytorch|Arm-cpu
-v5Lite-e.bin<br />v5Lite-e.param|1.7m|shufflenetv2|v5Litee-head|ncnn|Arm-cpu
-v5Lite-e-int8.bin<br />v5Lite-e-int8.param|0.9m|shufflenetv2|v5Litee-head|ncnn|Arm-cpu
-v5Lite-e-fp32.mnn|3.0m|shufflenetv2|v5Litee-head|mnn|Arm-cpu
-v5Lite-e-fp32.tnnmodel<br />v5Lite-e-fp32.tnnproto|2.9m|shufflenetv2|v5Litee-head|tnn|arm-cpu
-v5Lite-e-320.onnx|3.1m|shufflenetv2|v5Litee-head|onnxruntime|x86-cpu
-
-#### @v5lite-s:
-
-Model|Size|Backbone|Head|Framework|Design for
-:---:|:---:|:---:|:---:|:---:|:---
-v5Lite-s.pt|3.4m|shufflenetv2（Megvii）|v5Lites-head|Pytorch|Arm-cpu
-v5Lite-s.bin<br />v5Lite-s.param|3.3m|shufflenetv2|v5Lites-head|ncnn|Arm-cpu
-v5Lite-s-int8.bin<br />v5Lite-s-int8.param|1.7m|shufflenetv2|v5Lites-head|ncnn|Arm-cpu
-v5Lite-s.mnn|3.3m|shufflenetv2|v5Lites-head|mnn|Arm-cpu
-v5Lite-s-int4.mnn|987k|shufflenetv2|v5Lites-head|mnn|Arm-cpu
-v5Lite-s-fp16.bin<br />v5Lite-s-fp16.xml|3.4m|shufflenetv2|v5Lites-head|openvivo|x86-cpu
-v5Lite-s-fp32.bin<br />v5Lite-s-fp32.xml|6.8m|shufflenetv2|v5Lites-head|openvivo|x86-cpu
-v5Lite-s-fp16.tflite|3.3m|shufflenetv2|v5Lites-head|tflite|arm-cpu
-v5Lite-s-fp32.tflite|6.7m|shufflenetv2|v5Lites-head|tflite|arm-cpu
-v5Lite-s-int8.tflite|1.8m|shufflenetv2|v5Lites-head|tflite|arm-cpu
-v5Lite-s-416.onnx|6.4m|shufflenetv2|v5Lites-head|onnxruntime|x86-cpu
-
-#### @v5lite-c:
-
-Model|Size|Backbone|Head|Framework|Design for
-:---:|:---:|:---:|:---:|:---:|:---:
-v5Lite-c.pt|9m|PPLcnet（Baidu）|v5s-head|Pytorch|x86-cpu / x86-vpu
-v5Lite-c.bin<br />v5Lite-c.xml|8.7m|PPLcnet|v5s-head|openvivo|x86-cpu / x86-vpu
-v5Lite-c-512.onnx|18m|PPLcnet|v5s-head|onnxruntime|x86-cpu
-
-#### @v5lite-g:
-
-Model|Size|Backbone|Head|Framework|Design for
-:---:|:---:|:---:|:---:|:---:|:---:
-v5Lite-g.pt|10.9m|Repvgg（Tsinghua）|v5Liteg-head|Pytorch|x86-gpu / arm-gpu / arm-npu
-v5Lite-g-int8.engine|8.5m|Repvgg-yolov5|v5Liteg-head|Tensorrt|x86-gpu / arm-gpu / arm-npu
-v5lite-g-int8.tmfile|8.7m|Repvgg-yolov5|v5Liteg-head|Tengine| arm-npu
-v5Lite-g-640.onnx|21m|Repvgg-yolov5|yolov5-head|onnxruntime|x86-cpu
-v5Lite-g-640.joint|7.1m|Repvgg-yolov5|yolov5-head|axpi|arm-npu
 
 #### Download Link：
 
